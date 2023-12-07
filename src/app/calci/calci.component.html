@@ -1,0 +1,31 @@
+<div class="container-fluid bgm" [class.light-theme]="calculatorThemeClass === 'light-theme'">
+
+    <div class="calculator"  [class]="calculatorThemeClass">
+        <input type="text" [(ngModel)]="display" class="display-input" disabled>
+        <div class="btn1">
+            <label class="toggle-switch">
+                <input type="checkbox"(change)="changeTheme()"[class.light-theme]="calculatorThemeClass === 'light-theme'">
+                <span class="slider"[class.light-theme]="calculatorThemeClass === 'light-theme'"></span>
+            </label>
+            <button class="calculator-buttonss" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="clearDisplay()">DEL</button>
+        </div>
+        <div class="buttons">
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'" (click)="appendToDisplay('1')">1</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('2')">2</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('3')">3</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('/')">/</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('4')">4</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('5')">5</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('6')">6</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('*')">x</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('7')">7</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('8')">8</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('9')">9</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('-')">-</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('0')">0</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('.')">.</button>
+            <button class="calculator-buttons" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="calculateResult()">=</button>
+            <button class="calculator-button" [class.light-theme]="calculatorThemeClass === 'light-theme'"(click)="appendToDisplay('+')">+</button>
+        </div>
+    </div>
+</div>
